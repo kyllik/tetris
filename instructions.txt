@@ -1,0 +1,55 @@
+
+
+PELIN KÄYTTÖOHJEET
+
+Tetrominot putoavat alas ja peli päättyy kun pelialue on täynnä.
+Voit liikuttaa ja kääntää tetrominoja komennoilla:
+
+W - kierrä myötäpäivään
+A - liikuta vasemmalle
+S - pudota alas
+D - liikuta oikealle
+X - pudota kerralla alas
+Q - kierrä vastapäivään
+
+Pudota uusi tetromino nappulasta SPAWN.
+Uusi peli alkaa painamalla RESTART.
+Pelin saa suljettua painamalla QUIT.
+
+
+PELIN TOIMINNALLISUUS
+
+Mitä tapahtuu eri tilanteissa ja mitä voi tapahtua?
+
+Peli alkaa tyhjällä pelialueella. SPAWN-painikkeesta pelialueen yläreunaan
+ilmestyy satunnaisesti valittu tetromino. SPAWN lähtee putoamaan ja sitä voi
+liikuttaa vasemmalle ja oikealle. Ohjelma varmistaa aina, että otettava askel
+ei mene pelialueen seinistä läpi. Tetrominoa voi myös kääntää ja silloin jos se
+menee seinästä läpi, se kääntyy heti takaisin, jolloin näyttää kuin se ei olisi
+koskaan kääntynytkään. Myöskään tippuessaan tetromino ei mene pelialueen
+ulkopuolelle.
+
+Jokaisella näistä siirroista ja käännöksistä myös varmistetaan se, ettei
+tetromino mene pelialueen pohjalla olevien palojen läpi.
+
+Jos pelialueelle ei enää mahdu uutta palaa, peli päättyy ja textBrowseriin
+tulostuu "Game over!". Samalla SPAWN-nappi menee pois päältä ja menee takaisin
+päälle RESTARTIA painettaessa. RESTART myös tyhjentää pelialueen kaikista
+paloista.
+
+
+LISÄOMINAISUUDET
+-7 erimuotoista ja -kokoista tetrominoa
+-Tetrominoa voi kääntää 90 tai -90 astetta.
+-Peliasetelman voi palauttaa alkutilaan
+-Putoavan tetrominon voi pudottaa kerralla niin alas kuin mahdollista
+
+TEHDYT SUUNNITTELUPÄÄTÖKSET
+-Alkup. suunnitelma:
+    -tutustu ympyräesimerkkiin
+    -tutustu molempiin toteutustapoihin
+        -vektoreilla vai
+        -QGraphicsItemseillä
+    -toteuta minivaatimukset
+    -toteuta haluamasi lisäominaisuudet
+    -testaa
